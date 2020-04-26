@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: authservicedep
   labels:
-    app:authservice
+    app: authservice
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: authservice
-      tier:backend
-      track:stable
+      tier: backend
+      track: stable
   template:
     metadata:
       labels:
         app: authservice
-        tier:backend
-        track:stable
+        tier: backend
+        track: stable
     spec:
       containers:
       - name: authservice
